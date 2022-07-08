@@ -3,7 +3,7 @@ package com.bridge.labzs;
 public class addressmain {
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book System");
-         AddressBook addressBook = new AddressBook();
+        AddressBook addressBook = new AddressBook();
         addressBook.addContact();
         addressBook.addContact();
 
@@ -12,8 +12,8 @@ public class addressmain {
             System.out.println("The" + contacts);
         }
     }
-
-    private static class AddressBook {
+}
+    class AddressBook {
         public Contacts[] contactsArrayList;
         private Contacts addressBook;
 
@@ -29,6 +29,6 @@ public class addressmain {
 
     }
 
-    }
+    
 
 
