@@ -15,10 +15,18 @@ public class addressmain {
 
     private static class AddressBook {
         public Contacts[] contactsArrayList;
+        private Contacts addressBook;
 
         public void addContact() {
-
+            addressBook.editContacts();
+            System.out.println("After editing: ");
+            System.out.println("*********************");
+            for (Contacts contacts:addressBook.contactsArrayList) {
+                System.out.println("the"+contacts);
+            }
+            System.out.println("*********************");
         }
-
     }
+
+
 }

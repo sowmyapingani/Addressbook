@@ -1,5 +1,6 @@
 package com.bridge.labzs;
 public class Contacts {
+    public Contacts[] contactsArrayList;
     private String firstName;
     private String lastName;
     private String address;
@@ -69,5 +70,8 @@ public class Contacts {
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    public void editContacts() {
     }
 }

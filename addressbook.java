@@ -6,21 +6,21 @@ import java.util.List;
 public class addressbook {
     public static void main(String args[]) {
 
-    class AddressBook {
-        static Scanner scan = new Scanner(System.in);
-        List<Contacts> contactsArrayList = new ArrayList<Contacts>();
+        class AddressBook {
+            static Scanner scan = new Scanner(System.in);
+            List<Contacts> contactsArrayList = new ArrayList<Contacts>();
 
-        public void addContact() {
-            Contacts contacts = new Contacts();
-            System.out.println("FirstName: ");
-            String Firstname = scan.next();
-            contacts.setState(Firstname);
-            System.out.println("Lastname: ");
-            String Lastname = scan.next();
-            contacts.setState(Lastname);
-            System.out.println("address ");
-            String address = scan.next();
-            contacts.setAddress(address);
+            public void addContact() {
+                Contacts contacts = new Contacts();
+                System.out.println("FirstName: ");
+                String Firstname = scan.next();
+                contacts.setState(Firstname);
+                System.out.println("Lastname: ");
+                String Lastname = scan.next();
+                contacts.setState(Lastname);
+                System.out.println("address ");
+                String address = scan.next();
+                contacts.setAddress(address);
                 System.out.println("City: ");
                 String city = scan.next();
                 contacts.setState(city);
@@ -44,6 +44,17 @@ public class addressbook {
 
                 contacts.setEmail(email);
                 contactsArrayList.add(contacts);
+            }
+
+            public void editContacts() {
+                System.out.println("enter the first name to edit: ");
+                String firstName = scan.next();
+                for (Contacts contact : contactsArrayList) {
+                    if (firstName.equals(contact.getFirstName())) {
+                        contact.editContacts();
+                        break;
+                    }
+                }
             }
         }
     }
