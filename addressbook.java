@@ -36,7 +36,15 @@ public class addressbook {
     }
 
     public static class AddressBook {
+        public Contacts[] contactsArrayList;
+
         public void addContact() {
+        }
+
+        public void deleteContacts() {
+        }
+
+        public void editContacts() {
         }
     }
 }
